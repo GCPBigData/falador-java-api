@@ -3,10 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/comons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/comons/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/consumer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/falador-reative/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/publisher/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/publisher/src/main/resources" charset="UTF-8" />
   </component>
 </project>

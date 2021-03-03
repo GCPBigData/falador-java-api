@@ -4,8 +4,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/comons/pom.xml" />
-        <option value="$PROJECT_DIR$/consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/publisher/pom.xml" />
         <option value="$PROJECT_DIR$/falador-reative/pom.xml" />
       </list>
     </option>

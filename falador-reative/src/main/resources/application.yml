@@ -1,7 +1,0 @@
-server:
-  port: 8080
-
-sisvida-ml:
-  savedModel:
-    path: ../training/model/1530093489
-    tags: serve

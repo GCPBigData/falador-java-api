@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/falador-reative/src/main/java/br/falador/dto/PutasDTO.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

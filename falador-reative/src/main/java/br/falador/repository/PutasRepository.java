@@ -2,6 +2,7 @@ package br.falador.repository;
 
 import com.googolplex.documents.Putas;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import reactor.core.publisher.Flux;
 
 /**
  * @author Jose R F Junior
@@ -10,5 +11,10 @@ import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
  */
 
 public interface PutasRepository extends ReactiveMongoRepository<Putas, String>{
+
+    Flux<Putas> findByNome(String nome);
+
+    //flux lista
+    //mono 1 so um valor
 
 }

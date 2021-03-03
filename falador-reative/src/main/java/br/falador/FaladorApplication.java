@@ -6,9 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan(basePackages = {"br.falador"})
 @SpringBootApplication
-public class SisVidaApplication {
+public class FaladorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SisVidaApplication.class, args);
+		SpringApplication.run(FaladorApplication.class, args);
 	}
 }

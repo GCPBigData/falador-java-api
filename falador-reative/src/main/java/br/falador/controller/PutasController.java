@@ -1,13 +1,14 @@
 package br.falador.controller;
 
 import br.falador.repository.PessoaRepository;
+import br.falador.repository.PutasRepository;
 import br.falador.services.PessoaService;
+import br.falador.services.PutasService;
 import com.googolplex.documents.Pessoa;
+import com.googolplex.documents.Putas;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 /**
@@ -21,19 +22,27 @@ import reactor.core.publisher.Flux;
 @RestController
 public class PutasController {
 
-    /*
+    @Autowired
+    PutasService putasService;
 
     @Autowired
-    PessoaService pessoaService;
+    PutasRepository putasRepository;
 
-    @Autowired
-    PessoaRepository pessoaRepository;
-
-    @GetMapping(value = "/todos")
-    public Flux<Pessoa> getAll() {
-        return pessoaService.findAll();
+    //http://localhost:8080/putas/todasPutas
+    @GetMapping(value = "/todasPutas") //RETORNAR TODAS AS PUTAS, UMA LISTA DE PUTA
+    public Flux<Putas> getAll() {
+        return putasRepository.findAll();
     }
 
-     */
+    //PARAMETRO IN ENTRADA
+    //http://localhost:8080/putas/buscaNomePuta/maria
+    @GetMapping("/buscaNomePuta/{nome}") //JSON
+    public Flux<ResponseEntity<Putas>> getByNome(@PathVariable String nome) {
+        return putasRepository.findByNome(nome)
+                .map(ResponseEntity::ok) // retorna um mapa de puta
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
 
 }
+
+
